@@ -1,27 +1,5 @@
-import { SafeAny } from './types/index';
+export { Inject, Self, Skip, Optional, Injectable } from '@kaokei/di'; // 导出依赖注入需要的装饰器
 
-const logger: SafeAny = 'my-logger';
-
-export class Math {
-  static uid = 'MyMath';
-
-  static add(a: number, b: number) {
-    return a + b;
-  }
-
-  static subtract(a: number, b: number) {
-    return a - b;
-  }
-
-  static multiply(a: number, b: number) {
-    return a * b;
-  }
-
-  static divide(a: number, b: number) {
-    return a / b;
-  }
-
-  static log(msg: any) {
-    console.log(logger, msg);
-  }
-}
+export { Component } from './Component'; // 支持类组件
+export { declareProviders } from './declareProviders'; // setup中声明服务提供者
+export { useService } from './useService'; // setup中获取服务实例

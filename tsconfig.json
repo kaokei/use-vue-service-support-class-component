@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "dist",
-    "sourceMap": true,
     "declaration": true,
+    "sourceMap": true,
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
@@ -20,10 +20,14 @@
     "types": ["jest", "node"],
     "rootDir": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@services/*": ["example/services/*"],
+      "@components/*": ["example/components/*"],
+      "@containers/*": ["example/containers/*"],
+      "@src/*": ["src/*"],
+      "@/*": ["example/*"]
     }
   },
-  "include": ["src", "tests", "playground", "typings"],
+  "include": ["src", "tests", "playground", "example", "typings"],
   "exclude": [
     "node_modules",
     "asset",

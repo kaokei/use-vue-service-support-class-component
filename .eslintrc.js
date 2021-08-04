@@ -1,6 +1,15 @@
 module.exports = {
   root: true,
-  parser: '@typescript-eslint/parser',
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+    extraFileExtensions: ['.vue'],
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   env: {
     //启用一组全局变量
     browser: true,
@@ -46,7 +55,7 @@ module.exports = {
   overrides: [
     //定制一组文件的规则
     {
-      files: ['types/**/*.ts'],
+      files: ['src/types/**/*.ts'],
       rules: {
         'no-unused-vars': 0,
         '@typescript-eslint/no-unused-vars': 0,
